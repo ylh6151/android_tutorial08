@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">T02_Menu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_settings1">setting2</string>
+    <string name="action_settings2">setting3</string>
+</resources>
