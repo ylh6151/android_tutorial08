@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
-
+//
         CheckBox checkBox = (CheckBox)findViewById(R.id.checkbox);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
