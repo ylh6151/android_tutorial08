@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="ID : "
+        android:textSize="24sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textID"/>
+
+
+    <TextView
+        android:id="@+id/textPW"
+        android:layout_below="@+id/textID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="PW : "
+        android:textSize="24sp"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textPW"
+        android:layout_alignBottom="@+id/textPW"/>
+    <Button
+        android:text="LOGIN"
+        android:layout_below="@+id/textPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <Button
+        android:layout_centerVertical="true"
+        android:id="@+id/button1"
+        android:text="hello"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <Button
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:text="hello"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <Button
+        android:layout_below="@+id/button1"
+        android:text="hello"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+</RelativeLayout>
