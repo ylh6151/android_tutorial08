@@ -1,17 +1,54 @@
 package com.example.c.t11_mediaplayer;
 
+import android.media.MediaPlayer;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import java.io.IOException;
 
 
 public class MainActivity extends ActionBarActivity {
 
+    MediaPlayer mp = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btnPlay = (Button)findViewById(R.id.btnPlay);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String path = Environment.getExternalStorageDirectory().toString();
+                path += "/Music/frozen/05 - Let It Go.mp3";
+
+                mp = new MediaPlayer();
+                try {
+                    mp.setDataSource(path);
+                    mp.prepare();
+                    mp.start();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        Button btnStop = (Button)findViewById(R.id.btnStop);
+        btnStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mp != null) {
+                    mp.stop();
+                    mp.release();
+                    mp = null;
+                }
+            }
+        });
     }
 
     @Override
