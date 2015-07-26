@@ -8,12 +8,12 @@ import android.database.sqlite.SQLiteDatabase;
 /**
  * Created by c on 2015-07-26.
  */
-public class MyDBHelper {
+public class MyDBHandler {
 
     T10SQLiteOpenHelper helper;
     SQLiteDatabase db;
 
-    public MyDBHelper(Context context) {
+    public MyDBHandler(Context context) {
         helper = new T10SQLiteOpenHelper(context,"person.sqlite", null, 1);
     }
 
