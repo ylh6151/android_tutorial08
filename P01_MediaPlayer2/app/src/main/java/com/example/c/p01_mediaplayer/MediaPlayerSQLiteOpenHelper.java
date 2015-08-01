@@ -15,7 +15,7 @@ public class MediaPlayerSQLiteOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String str = "CREATE TABLE playlist (id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "file_name TEXT, stop_position INTEGER, play_date DATE)";
+                "file_name TEXT, stop_position INTEGER, play_date TEXT)";
         db.execSQL(str);
     }
 

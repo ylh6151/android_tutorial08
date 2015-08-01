@@ -19,7 +19,7 @@ public class MediaPlayerDBHandler {
         helper = new MediaPlayerSQLiteOpenHelper(context,"playhistory.sqlite", null, 1);
     }
 
-    public void insert(String name, int age, Date date){
+    public void insert(String name, int age, String date){
         db = helper.getWritableDatabase();
         //String str = "INSERT INTO student VALUES(null," + name + ","+age+","+address+")";
 
@@ -55,7 +55,7 @@ public class MediaPlayerDBHandler {
         while(c.moveToNext()){
             String filename = c.getString(c. getColumnIndex("file_name"));
             int age = c.getInt(c. getColumnIndex("stop_position"));
-            Date address = c. getColumnIndex("play_date");
+            String address = c.getString(c. getColumnIndex("play_date"));
 
             result += "name :" + filename + ", age :"+ age +", address : "+address + "\n";
         }
