@@ -51,14 +51,21 @@ public class PlayActivity extends ActionBarActivity {
                         e.printStackTrace();
                     }
 
-                    if(mp != null && mp.isPlaying()) {
+                    if(mp != null) {
+                        try{
+                            if(mp.isPlaying()) {
+                                //float progress = (float)mp.getCurrentPosition() / (float)mp.getDuration();
+                                //progressBar.setProgress((int){progress * 100});
 
-                        //float progress = (float)mp.getCurrentPosition() / (float)mp.getDuration();
-                        //progressBar.setProgress((int){progress * 100});
+                                Log.d("Mediaplayer", "mp.getCurrentPosition() : " + mp.getCurrentPosition());
+                                Log.d("Mediaplayer", "mp.getDuration() : " + mp.getDuration());
+                                progressBar.setProgress(mp.getCurrentPosition());
+                            }
+                        }catch(Exception e){
 
-                        Log.d("Mediaplayer", "mp.getCurrentPosition() : " + mp.getCurrentPosition());
-                        Log.d("Mediaplayer", "mp.getDuration() : " + mp.getDuration());
-                        progressBar.setProgress(mp.getCurrentPosition());
+                        }
+
+
                     }
                 }
             }
