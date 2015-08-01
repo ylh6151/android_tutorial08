@@ -31,13 +31,11 @@ public class MainActivity extends ActionBarActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        MyPullParser parser = new MyPullParser(textView);
-        parser.execute("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159054000");
+        //MyPullParser parser = new MyPullParser(textView);
+        //parser.execute("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159054000");
 
-        //MyXMLTask task = new MyXMLTask(textView);
-        //task.execute("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159054000");
-
-        textView.setText( parser.getStr() );
+        MyXMLTask task = new MyXMLTask(textView);
+        task.execute("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159054000");
 
     }
 

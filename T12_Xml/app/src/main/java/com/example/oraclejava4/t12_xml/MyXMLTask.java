@@ -46,13 +46,13 @@ public class MyXMLTask extends AsyncTask<String, Void, Document>
         } catch (Exception e){
             e.printStackTrace();
         }
-        return null;
+        return doc;
     }
 
     private String getTagValue(Element dataElement, String tagName){
         NodeList nodeList = dataElement.getElementsByTagName(tagName);
-        Element dayElement = (Element)nodeList.item(0); //<day>0</day>
-        NodeList textNodeList = dayElement.getChildNodes();
+        Element element = (Element)nodeList.item(0); //<day>0</day>
+        NodeList textNodeList = element.getChildNodes();
         return textNodeList.item(0).getNodeValue(); //0
     }
 
