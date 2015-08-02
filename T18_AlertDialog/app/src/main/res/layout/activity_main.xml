@@ -7,7 +7,25 @@
 
     <Button
         android:id="@+id/button"
-        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:text="alert dialog" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_below="@id/button"
+        android:text="custom dialog" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_below="@id/button2"
+        android:text="progress dialog" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_below="@id/button3"
+        android:text="progress dialog 2" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>
