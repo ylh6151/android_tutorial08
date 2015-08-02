@@ -12,6 +12,6 @@ public class MyCustomBR extends BroadcastReceiver {
     NotificationManager manager;
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        manager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
     }
 }
