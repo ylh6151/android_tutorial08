@@ -75,6 +75,26 @@ public class MainActivity extends ActionBarActivity {
 
         geocoder = new Geocoder(this);
         Button btnUp = (Button) findViewById(R.id.btnUp);
+        btnUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String strAddress= editAddress.getText().toString();
+                List<Address> list = null;
+
+                try {
+                    list = geocoder.getFromLocationName(strAddress, 10);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                if(list != null){
+
+                    editLat.setText(""+list.get(0).getLatitude());
+                    editLong.setText(""+ list.get(0).getLongitude());
+                }
+            }
+        });
+
         final Button btnDown = (Button) findViewById(R.id.btnDown);
         btnDown.setOnClickListener(new View.OnClickListener() {
             @Override
