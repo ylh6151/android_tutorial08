@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 
@@ -22,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         selectedTextView = (TextView) findViewById(R.id.selectedTextView);
         workingTextview = (TextView) findViewById(R.id.workingTextView);
-        button1 = (Button) findViewById(R.id.button1);
+       /* button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         buttonEnter = (Button) findViewById(R.id.enterButton);
-
+*/
         View.OnClickListener numberButtonListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 workingTextview.setText(str);
             }
         };
+        /*
         button1.setOnClickListener(numberButtonListener);
         button2.setOnClickListener(numberButtonListener);
         buttonEnter.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +46,41 @@ public class MainActivity extends AppCompatActivity {
                 selectedTextView.setText(workingTextview.getText().toString());
 
             }
-        });
+        });*/
+
+        TableLayout tableLayout = (TableLayout) findViewById(R.id.tableLayout);
+        for(int i = 2; i<tableLayout.getChildCount(); i++){
+            TableRow tableRow = (TableRow) tableLayout.getChildAt(i);
+
+            int number = 1;
+            for(int k = 0; i<tableRow.getChildCount() - 1; k++){
+                Button button = (Button) tableRow.getChildAt(k);
+                button.setText(""+ number);
+                button.setOnClickListener(numberButtonListener);
+                number++;
+            }
+
+            int bottomCount = tableLayout.getChildCount();
+            TableRow bottomRow = (TableRow) tableLayout.getChildAt(bottomCount - 1);
+            Button deleteButton = (Button) bottomRow.getChildAt(0);
+            deleteButton.setText("지움");
+            deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    workingTextview.setText("0");
+                }
+            });
+            Button zeroButton = (Button) bottomRow.getChildAt(1);
+            zeroButton.setText("0");
+            zeroButton.setOnClickListener(numberButtonListener);
+            Button enterButton = (Button) bottomRow.getChildAt(2);
+            enterButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    selectedTextView.setText(workingTextview.getText().toString());
+                }
+            });
+        }
     }
 
     @Override

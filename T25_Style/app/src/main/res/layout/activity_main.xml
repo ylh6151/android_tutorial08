@@ -28,23 +28,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <TableRow
-        android:layout_weight="1">
-        <Button
-            android:id="@+id/button1"
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:text = "1"/>
-        <Button
-            android:id="@+id/button2"
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:text = "1"/>
-        <Button
-            android:id="@+id/enterButton"
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:text = "확인"/>
-    </TableRow>
+    <include android:layout_weight="1"
+        layout="@layout/button_row"/>
+    <include android:layout_weight="1"
+        layout="@layout/button_row"/>
+    <include android:layout_weight="1"
+        layout="@layout/button_row"/>
+    <include android:layout_weight="1"
+        layout="@layout/button_row"/>
+
 
 </TableLayout>
