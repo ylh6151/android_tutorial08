@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.c.p02_service" >
+    package="com.example.c.t23_json" >
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,12 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".MyService"/>
-<!--        <receiver android:name=".MyHeadsetBroadCastReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_HEADSET_PLUG"/>
-            </intent-filter>
-        </receiver>-->
     </application>
 
 </manifest>
