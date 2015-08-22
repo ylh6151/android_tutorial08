@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">T30_CriminalIntent</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_hint">범죄의 제목을 입력하세요.</string>
+</resources>
