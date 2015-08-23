@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/c/t30_criminalintent/CrimeLab.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/c/t30_criminalintent/CrimeListActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/c/t30_criminalintent/CrimeListFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/c/t30_criminalintent/CrimePagerActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/c/t30_criminalintent/DatePickerFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/c/t30_criminalintent/SingleFragmentActivity.java" charset="UTF-8" />
   </component>
 </project>

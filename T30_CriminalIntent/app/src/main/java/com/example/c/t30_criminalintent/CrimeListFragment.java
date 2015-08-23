@@ -44,7 +44,8 @@ public class CrimeListFragment extends ListFragment {
         //super.onListItemClick(l, v, position, id);
         Crime c = (Crime) getListAdapter().getItem(position);
         //Log.d("CrimeListFragment", c.getTitle() + " clicked");
-        Intent intent = new Intent(getActivity(), CrimeActivity.class);
+        //Intent intent = new Intent(getActivity(), CrimeActivity.class);
+        Intent intent = new Intent(getActivity(), CrimePagerActivity.class);
         intent.putExtra(CrimeFragment.EXTRA_CRIME_ID, c.getId());
         startActivity(intent);
     }
